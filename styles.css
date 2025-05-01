@@ -53,7 +53,8 @@ p {
     margin-top: 10px;
     line-height: 1.5;
 }
-.artists_container{
+
+section .artists_container{
     max-width: 150px;
     border-radius: 10px;
 }
