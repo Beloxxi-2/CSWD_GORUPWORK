@@ -1,0 +1,63 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the nav menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Team Container */
+.team_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual team member styling */
+section {
+    text-align: center;
+    width: 250px;
+}
+
+/* Image styling */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Styling for headings and paragraphs */
+h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.5;
+}

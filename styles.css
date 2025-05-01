@@ -1,4 +1,37 @@
-p{
-    font-size:10rem;
-    font-weight: bolder;
+.team_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 40px;
+    justify-items: center; /* center content horizontally */
+    align-items: center;    /* center content vertically */
+    padding: 20px;
+}
+
+/* Individual team member styling */
+.team_container section {
+    text-align: center;
+    width: 100%; /* full width within grid cell */
+    max-width: 250px;
+}
+
+/* Image styling */
+.team_container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Styling for headings and paragraphs */
+.team_container h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.team_container p {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.cover{
+    background-image: url('images/building.jpg');
 }
