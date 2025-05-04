@@ -8,6 +8,7 @@
 /* Styling for the nav menu */
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -15,19 +16,18 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    padding: 10px;
+padding: 10px;
 }
 
 nav ul li a:hover {
     background-color: #434242;
 }
-
 
 /* Individual team member styling */
 section {
@@ -55,38 +55,49 @@ p {
 }
 
 body {
-    background-color: #ffffff;
     font-family: Arial, sans-serif;
-    color: #060606;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Styling for artists page*/
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
 
+header .logo img {
+    max-width: 150px;
+}
 
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
 
-.Artists{
-    width: 100%;
+/* Styling for artists page */
+.Artists {
     display: flex;
+    flex-wrap: wrap;
     background: linear-gradient(to bottom right, #b6b8b7, #928f8f);
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    width: 80%;
     overflow: hidden;
-    flex-wrap: wrap;
 }
 
 .artist_img {
     flex: 1 1 250px;
+    text-align: center;
 }
 
 .artist_img img {
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
 .artist_info {
@@ -96,9 +107,7 @@ body {
 
 .artist_info h2 {
     font-size: 2rem;
-    color: rgb(204, 211, 207);
     margin-bottom: 10px;
-    align-content: center;
 }
 
 .artist_info p {
@@ -106,14 +115,21 @@ body {
     line-height: 1.6;
 }
 
-.logo{
-padding: 10px 20px;
-margin: 0;
-display: flex;
-justify-content: center;
+.logo {
+    padding: 10px 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .logo img {
-max-width: 300px;
-max-height: fit-content;
+    max-width: 300px;
+    max-height: fit-content;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
 }
