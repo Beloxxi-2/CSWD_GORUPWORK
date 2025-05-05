@@ -1,5 +1,24 @@
-.team_container {
-    display: grid;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/accom.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: 4rem;
+  }
+.team_container {    display: grid;
     grid-template-columns: repeat(2, 1fr); /* two columns */
     gap: 40px;
     justify-items: center; /* center content horizontally */
@@ -35,3 +54,39 @@
 .cover{
     background-image: url('images/building.jpg');
 }
+ .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .slideshow-container img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(0.7);
+  }
+  
+  .slideshow-container img:first-child {
+    display: block;
+  }
+  
+  .slideshow-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
