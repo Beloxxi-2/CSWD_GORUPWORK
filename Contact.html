@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Festival Apartments</title>
-  <link rel="stylesheet" href="bookings.css"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
     <nav>
@@ -41,8 +41,43 @@
         </div>
       </nav>
       
-  
-    <h1>About us </h1>
-    <Section></Section>
+  <div class="contact-details">
+    <h2>Our Contact Information</h2>
+    <p>Email: support@festival.com</p>
+    <p>Phone: +1 234 567 890</p>
+    <p>Address: 123 Festival Avenue, Music City, USA</p>
+    <p>Hours: Mon - Fri: 9am - 5pm</p>
+  </div>
+
+  <h1>Contact Us</h1>
+  <form id="contactForm">
+   
+    <h2>Send Us a Message</h2>
+
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="subject">Subject*</label>
+    <input type="text" id="subject" name="subject" required />
+
+    <label for="message">Message*</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Preview Message</button>
+
+    <div class="preview-box" id="previewBox">
+      <h3>Preview:</h3>
+      <p><strong>Name:</strong> <span id="previewName"></span></p>
+      <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+      <p><strong>Subject:</strong> <span id="previewSubject"></span></p>
+      <p><strong>Message:</strong></p>
+      <p id="previewMessage"></p>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
