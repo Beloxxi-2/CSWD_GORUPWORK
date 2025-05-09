@@ -1,0 +1,139 @@
+/* General Reset and Body Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  /* Navigation Styles */
+nav {
+    background-color: #333;
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  ul.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  ul.nav-menu li {
+    position: relative;
+  }
+  
+  ul.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+  }
+  
+  ul.nav-menu li:hover > a {
+    background-color: #444;
+  }
+  
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    padding: 0.75rem 1rem;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+  }
+  .contact-details {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .contact-details p {
+    line-height: 1.6;
+  }
+
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  form button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .preview-box {
+    display: none;
+    background: #e9ffe9;
+    border: 1px solid #8bc34a;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
