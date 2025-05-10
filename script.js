@@ -57,3 +57,75 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   document.getElementById('previewMessage').textContent = message;
 
   document.getElementById('previewBox').style.display = 'block' });
+
+//   SWITCHING IMAGES
+  var productElements = document.querySelectorAll(".product");
+
+  for (var i = 0; i < productElements.length; i++) {
+    var product = productElements[i];
+
+    product.addEventListener("mouseenter", function(event) {
+      var imageElement = this.querySelector("img");
+      var backImage = imageElement.getAttribute("data-back");
+      imageElement.src = backImage;
+    });
+
+    product.addEventListener("mouseleave", function(event) {
+      var imageElement = this.querySelector("img");
+      var frontImage = imageElement.getAttribute("data-front");
+      imageElement.src = frontImage;
+    });
+}
+
+// DIRECTION TO PRODUCT SECTIONS
+
+// Get the hash from the URL (e.g. "#2")
+const hash = window.location.hash.replace("#", "");
+console.log("HASH IS:", hash);
+
+// Hide all sections
+document.querySelectorAll(".powerless-div").forEach(element => {
+  element.style.display = "none";
+  console.log("Successfully hidden all sections")
+});
+
+// Show the specific section if the ID matches
+if (hash) {
+  const section = document.getElementById(hash);
+  if (section) {
+    section.style.display = "block";
+  }
+} else {
+    console.log("No matching ID")
+}
+
+// SWITCH DISPLAY FOR UNDER PRODUCTS
+
+// Select all under-product links
+document.querySelectorAll('a.under-product').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent navigation to products.html...
+  
+      const hash = this.href.split('#')[1]; // Get hash part
+      console.log("HASH IS:", hash);
+  
+      // Hide all target sections
+      document.querySelectorAll(".powerless-div").forEach(element => {
+        element.style.display = "none";
+      });
+  
+      // Show the specific section by ID
+      if (hash) {
+        const section = document.getElementById(hash);
+        if (section) {
+          section.style.display = "block";
+          console.log("Section with ID: " + hash + " displayed")
+        } else {
+          console.log("Section with ID '" + hash + "' not found.");
+        }
+      } else {
+        console.log("No hash found.");
+      }
+    });
+  });
+  
