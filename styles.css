@@ -1,0 +1,287 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'RobotoRegular', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to bottom, #1A1A40, #000000);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .home-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header .logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Center the navigation bar */
+.nav-wrap {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 10px; /* Smooth edges for the nav bar */
+    padding: 10px;
+}
+nav ul li a.active {
+    background-color: #555; /* Highlight the active link */
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('Images/festival_background.webp') no-repeat center center; /* Add the background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    height: 100vh; /* Full viewport height */
+    color: #fff; /* White text for readability */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text alignment */
+    padding: 50px 20px;
+    border-bottom: 2px solid #aaa; /* Subtle separation from the header */
+}
+
+.hero-content {
+    max-width: 800px; /* Limit the width of the content */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+.cta-button {
+    background-color: #1A1A40; /* Dark button for contrast */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+/* About Section */
+.about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Featured Artists Section */
+.featured-artists {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-artists h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+
+.artist-listing {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.artist-link {
+    width: 200px;
+    text-align: center;
+}
+
+.artist-link img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.artist-link h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.artist-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.artist-link {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+}
+
+.artist-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.artist-link:hover {
+    transform: scale(1.05);
+}
+
+.image-feature img {
+    width: 100%;
+    height: auto;
+}
+
+.artist-detail {
+    padding: 15px;
+    text-align: center;
+}
+
+.artist-detail h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.artist-detail p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+
+
+/* Ticket Listing Section */
+.ticket-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.ticket-card {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: scale(1.05);
+}
+
+.ticket-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.ticket-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    background-color: #1A1A40;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
