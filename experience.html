@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link  rel="stylesheet" href="style.css">
+  <title>Wireless Festival- Experience</title>
+
+</head>
+<body>
+
+    <header class="navbar">
+        <h1 class="logo">Wireless</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" >About</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="lineup.html">Lineup</a></li>
+                <li><a href="experience.html" class="active" >Experience</a></li>
+                <li><a href="Contact.html" >Contact Us</a></li>
+                <li><a href="Apartments.html">Apartments</a></li>
+                <li><a href="Developers.html" >Developers</a></li>
+                <li><a href="#" id="toggle-theme">Dark Mode</a></li>
+              </ul>
+          <div class="mobile-menu" id="menu-toggle">&#9776;</div>
+        </nav>
+      </header>
+
+<section class="section">
+  <h2  class="section-title">Previous Artists</h2>
+  <div class="artist-grid">
+    <div class="artist-card">
+      <img src="images/drake.webp" alt="Drake">
+      <p>Drake (2023)</p>
+    </div>
+    <div class="artist-card">
+      <img src="images/CARDI.webp" alt="Cardi B">
+      <p>Cardi B (2022)</p>
+    </div>
+    <div class="artist-card">
+      <img src="images/TRAVIS.jpg" alt="Travis Scott">
+      <p>Travis Scott (2019)</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+    <h2  class="section-title">Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/wirless 1.avif" alt="Stage" onclick="openLightbox(this.src)">
+      <img src="images/wirless 3.jpg" alt="Crowd" onclick="openLightbox(this.src)">
+      <img src="images/wireless2.jpg" alt="Vibes" onclick="openLightbox(this.src)">
+      <img src="images/wireless4.jpg" alt="Main Stage" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+
+<section class="section">
+  <h2  class="section-title">Festival Highlights</h2>
+  <div class="video-section">
+    <iframe id="video" src="https://www.youtube.com/embed/zkE8HD10EU0" allowfullscreen></iframe>
+    <iframe id="video"   src="https://www.youtube.com/embed/tFWPlu6zwQo"  allowfullscreen></iframe>
+  </div>
+</section>
+</body>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Wireless is an entertainment company driving innovation in live music and digital experiences.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Wireless Festival. All rights reserved.</p>
+  </footer>
+<script src="script.js"></script>
+</html>
