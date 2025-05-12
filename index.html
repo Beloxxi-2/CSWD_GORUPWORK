@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wireless Festival 2025 - The UK's leading urban music festival at Finsbury Park, London, July 11-13, 2025." />
+  <title>Wireless Festival 2025 | Official Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">Wireless</a>
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="#" id="toggle-theme">Dark Mode</a></li>
+        </ul>
+        <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="sr-only">Menu</span>
+          <span class="menu-icon">&#9776;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <!-- Video background -->
+      <video autoplay muted loop playsinline class="hero-bg" poster="images/festival-poster.jpg">
+        <source src="WirelessVid.mp4" type="video/mp4">
+        <!-- Fallback text for browsers that don't support video -->
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Wireless Festival 2025</h2>
+          <p>Finsbury Park, London | July 11–13</p>
+          <div class="hero-buttons">
+            <a href="tickets.html" class="btn primary">Buy Tickets</a>
+            <a href="lineup.html" class="btn secondary">View Lineup</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lineup-preview">
+      <h2>Line-Up Highlights</h2>
+      <div class="artist-grid">
+        <div class="artist-card">
+          <img src="Burna boy.jpeg" alt="Artist Name 1" width="400" height="300">
+          <h3>Burna Boy</h3>
+          <p>Main Stage - Friday</p>
+        </div>
+        <div class="artist-card">
+          <img src="Central cee.jpeg" alt="Artist Name 2" width="400" height="300">
+          <h3>Central Cee</h3>
+          <p>Main Stage - Saturday</p>
+        </div>
+        <div class="artist-card">
+          <img src="Jorga Smith.jpeg" alt="Artist Name 3" width="400" height="300">
+          <h3>Jorga Smith</h3>
+          <p>Main Stage - Sunday</p>
+        </div>
+      </div>
+      <div class="cta-link">
+        <a href="lineup.html" class="btn secondary">See Full Line-Up</a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Get Festival Updates</h2>
+      <p>Sign up for exclusive festival news and announcements</p>
+      <form id="newsletter-form">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p class="form-feedback" id="newsletter-feedback"></p>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="arrow">►</span> What are the festival hours?
+        </button>
+        <div class="faq-answer">
+          <p>Doors open at 11:00 AM daily, with performances ending at 10:30 PM.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="arrow">►</span> Is re-entry allowed?
+        </button>
+        <div class="faq-answer">
+          <p>No, re-entry is not allowed once you've entered the venue for the day.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="arrow">►</span> Are there age restrictions?
+        </button>
+        <div class="faq-answer">
+          <p>Yes, Wireless Festival is an 18+ event. Valid ID is required at the entrance.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span class="arrow">►</span> What items are prohibited?
+        </button>
+        <div class="faq-answer">
+          <p>Prohibited items include outside food and drinks, professional cameras, drones, glass containers, and any weapons. See our <a href="faq.html">full FAQ page</a> for a complete list.</p>
+        </div>
+      </div>
+      <div class="view-all-link">
+        <a href="faq.html">View All FAQs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>About</h3>
+        <p>The UK's leading urban music festival featuring top international acts and unforgettable experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://instagram.com/wirelessfest" target="_blank" rel="noopener noreferrer" aria-label="Follow Wireless Festival on Instagram">Instagram</a>
+          <a href="https://tiktok.com/@wirelessfest" target="_blank" rel="noopener noreferrer" aria-label="Follow Wireless Festival on TikTok">TikTok</a>
+          <a href="https://youtube.com/wirelessfestival" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Wireless Festival YouTube channel">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Wireless Festival. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="cookies.html">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
