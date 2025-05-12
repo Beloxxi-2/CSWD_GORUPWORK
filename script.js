@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // DOM Elements
 const body = document.body;
 const themeToggle = document.getElementById('toggle-theme');
@@ -192,3 +194,4 @@ document.addEventListener('DOMContentLoaded', function () {
     changeSlide();
   });
 });
+>>>>>>> c7b16d3effeda26231014462818ee3f0840ed5d0
