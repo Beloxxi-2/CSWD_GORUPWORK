@@ -456,3 +456,377 @@ form button {
     padding: 14px;
   }
 }
+
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;  
+}
+
+/* PARTNERS PAGE */
+body.partners-page {
+    background-image: url("Images/Wireless\ bg.png");
+    font-family: "Bebas Neue", sans-serif;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav {
+    gap: 10px; /* space between button and logo */
+    padding: 10px;
+}
+.heading{
+    font-size: 8rem;
+    background: none;
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-top: 10rem;
+    color: black;
+}
+.partner-imgs{
+    display: block;
+    margin: 0 ;
+}
+.partners-page hr {
+    border: none;
+    height: 4px; /* thickness */
+    background-color: black; /* or any color */
+    width: 50%; /* control how long it is */
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+.partner-info{
+    margin-left: 8rem;
+    display: inline-block;
+    position: relative;
+    padding: 0 40px 0 30px;
+    background-color: rgb(255, 255, 255);
+    max-width: calc(100% - 363px);
+    z-index: 4;
+}
+
+.partner-info p{
+    line-height: 1.3em;
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.3em;
+}
+
+.partners-footer{
+    margin-top: 1rem;
+    background-color: black;
+    /* width: 100%; */
+}
+
+/* MERCH PAGE */
+body.merch-page {
+    background-color: rgb(26, 26, 26);
+    font-family: "Roboto Slab", serif;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.merch-label {
+    text-transform: uppercase;
+    color: rgb(227, 13, 114);
+    font-size: 1.4rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.merch-page hr{
+    margin: 0;
+    border: none;
+    height: 1px; /* thickness */
+    background-color: gray; /* or any color */
+}
+
+.wireless-merch-logo {
+    display: block;
+    margin: 0px auto 0 auto;
+    max-width: 18rem;
+    height: auto;
+}
+.merchHeading{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.merchBg{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+
+.merch-page header {
+    align-items: center;
+    justify-content: center;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    all: unset;                
+    cursor: pointer;           
+    display: contents;
+}
+
+.product{
+    cursor:  pointer;
+    color: white;
+    padding: 1.5rem;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+/* Remove left border on the first column of each row */
+.product-grid a:nth-child(4n + 1) .product {
+    border-left: none;
+}
+  
+
+
+.product h3{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 2px;
+    font-weight:300;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.product p{
+    font-weight:300;
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.product img{
+    width: 17rem;
+    margin: 0;
+    height: auto;
+}
+
+.product:hover{
+    color: rgb(227, 13, 114);
+}
+
+.newsletter h3{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    color: rgb(227, 13, 114);
+    margin-top: 1rem;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.newsletter p{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    margin-top: 0;
+    color: rgb(227, 13, 114);
+    margin-left: 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* PRODUCT ONLY PAGE */
+body.product-page {
+    background-color: rgb(26, 26, 26);
+    font-family: "Roboto Slab", serif;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.product-page hr{
+    margin: 0;
+    border: none;
+    height: 1px; /* thickness */
+    background-color: gray; /* or any color */
+}
+
+/* PRODUCT GRID */
+.product-view-grid {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-view-grid .img-detail{
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    text-align: left;
+    border-bottom: 0.5px solid grey;
+    border-left: 0.1px solid grey;
+    border-top: 0.1px solid grey;
+}
+
+.product-view-grid .img-detail h3{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.product-view-grid .img-detail .price{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.product-view-grid .img-detail .avaiability{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.powerless-div{
+    all: unset; 
+    display: contents; 
+}
+
+.product-view-grid .img-detail .sales{
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: red;
+    color: black;
+    font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 0;
+    width: 20rem;
+}
+
+.product-view-grid .image{
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 1.2rem;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+}
+
+.product-view-grid .image img{
+    margin: 0;
+    padding: 0;
+    width: 591.833px;
+    height: 591.833px;
+}
+
+/* DOUBLE IMAGES */
+.product-view-grid .double-image{
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 1.2rem;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    display: flex;
+    gap: 1rem;
+}
+
+.product-view-grid .double-image img{
+    
+    margin: 0;
+    padding: 0;
+    width: 285.917px;
+    height: 285.917px;
+    margin-bottom: 10rem;  
+}
+
+
+
+/* OTHER PRODUCT OPTIONS */
+.under-product-grid{
+    margin-top: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* REMOVE BORDER LEFT ON FIRST PRODUCTS */
+.under-product-grid a:first-child .product {
+    border-left: none;
+}
+  
+
+.under-product-grid img{
+    margin: 0;
+    padding: 0;
+    width: 17rem;
+    height: auto;
+}
+
+.product-view-grid h3{
+    text-transform: uppercase;
+}
+
+
+footer {
+    font-family: "Roboto Slab", serif;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px;
+    color: white;
+}
+
+/* MEDIA QUERIES */
+/* @media (max-width: 768px) {
+    .under-product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .under-product-grid {
+      grid-template-columns: 1fr;
+    }
+  } */
