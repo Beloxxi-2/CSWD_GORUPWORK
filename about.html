@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Wireless Company</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+
+.hero-section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+    .hero-section h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 40px 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #ff1b6b;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    
+    .timeline-item {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+      margin-bottom: 40px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: white;
+      border: 4px solid #ff1b6b;
+      top: 20px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: #ff1b6b;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .value-card {
+      background-color: #f8f8f8;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .value-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .value-card h3 {
+      color: #ff1b6b;
+      margin-bottom: 15px;
+    }
+    
+    .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff1b6b;
+    }
+    
+    .team-section {
+      padding: 60px 0;
+      background-color: #f0f0f0;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .team-member {
+      text-align: center;
+    }
+    
+    .team-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    
+    .team-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+    
+    .team-role {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 40px;
+      align-items: center;
+      margin: 40px 0;
+    }
+    
+    .partner-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    
+    .partner-logo:hover {
+      filter: grayscale(0%);
+    }
+    
+    .testimonial-section {
+      background-color: #111;
+      color: white;
+      padding: 80px 20px;
+      margin: 60px 0;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .testimonial-card {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      font-weight: bold;
+    }
+    
+    .quote-mark {
+      font-size: 4rem;
+      position: absolute;
+      opacity: 0.2;
+      top: 20px;
+      left: 20px;
+      font-family: Georgia, serif;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #ff1b6b;
+      margin: 15px auto 0;
+    }
+    
+    .stats-section {
+      padding: 60px 20px;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    
+    .stat-item h3 {
+      font-size: 3rem;
+      color: #ff1b6b;
+      margin-bottom: 10px;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #ff1b6b 0%, #45caff 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      margin: 60px 0 0 0;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      color: #ff1b6b;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Dark mode adjustments */
+    body.dark-mode .value-card {
+      background-color: #222;
+      color: #eee;
+    }
+    
+    body.dark-mode .team-section {
+      background-color: #181818;
+      color: #eee;
+    }
+    
+    body.dark-mode .team-role {
+      color: #aaa;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+      
+      .timeline::before {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item::after {
+        left: 21px;
+        right: auto;
+      }
+      
+      .timeline-item:nth-child(even)::after {
+        left: 21px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">Wireless</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="lineup.html">Lineup</a></li>
+        <li><a href="#" id="toggle-theme">Dark Mode</a></li>
+      </ul>
+      <div class="mobile-menu" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main class="content fade-in">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="Pic wireless.jpg" alt="Wireless Festival Crowd" class="hero-img" />
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <h1>Our Story</h1>
+          <p>From humble beginnings to becoming a global force in entertainment...</p>
+        </div>
+      </section>
+      
+
+    <!-- About Company Section -->
+    <section class="container">
+      <h2 class="section-title">About Wireless</h2>
+      <p>Wireless is a global entertainment company that specializes in large-scale event production, music festival curation, and multimedia broadcasting. Founded in London, Wireless has become synonymous with cutting-edge music experiences and state-of-the-art event technology.</p>
+      
+      <p>We aim to connect artists with fans in unforgettable ways—through live shows, digital experiences, and cultural programming. Our portfolio spans not only the iconic Wireless Festival but also partner events and innovative media projects worldwide.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>15+</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3>500K+</h3>
+          <p>Festival Attendees</p>
+        </div>
+        <div class="stat-item">
+          <h3>32</h3>
+          <p>Countries Reached</p>
+        </div>
+        <div class="stat-item">
+          <h3>200+</h3>
+          <p>Team Members</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="container">
+      <h2 class="section-title">Our Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2010</div>
+          <h3>Our Beginning</h3>
+          <p>Founded in London with a vision to transform music experiences through innovative event productions.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2013</div>
+          <h3>First Wireless Festival</h3>
+          <p>Launched our flagship festival, introducing a new standard for live music events in Europe.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2016</div>
+          <h3>Global Expansion</h3>
+          <p>Extended our reach to North America and Asia, bringing the Wireless experience to new audiences.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2020</div>
+          <h3>Digital Revolution</h3>
+          <p>Pivoted to digital experiences, reaching millions through innovative virtual platforms.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <h3>Present & Future</h3>
+          <p>Continuing to push boundaries in entertainment through technology integration and sustainable practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="container">
+      <h2 class="section-title">Our Mission & Values</h2>
+      <p>At Wireless, our core mission is to create transformative entertainment experiences that connect artists and audiences in meaningful ways while pushing the boundaries of what's possible.</p>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">&#128161;</div>
+          <h3>Innovation</h3>
+          <p>We push boundaries in music, technology, and experience design, constantly exploring new ways to delight and inspire.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#127758;</div>
+          <h3>Diversity</h3>
+          <p>We celebrate and promote inclusive lineups and community-driven programming, ensuring all voices are heard.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#127942;</div>
+          <h3>Excellence</h3>
+          <p>We strive for world-class production quality in everything we do, never compromising on the highest standards.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#127793;</div>
+          <h3>Sustainability</h3>
+          <p>We are committed to reducing our environmental impact and supporting green initiatives across all our operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p>The passionate individuals behind Wireless who make the magic happen every day.</p>
+        
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="/api/placeholder/200/200" alt="Team Member" class="team-photo">
+            <h3 class="team-name">Sarah Johnson</h3>
+            <p class="team-role">CEO & Founder</p>
+            <p>Visionary leader with 20+ years in the music industry.</p>
+          </div>
+          <div class="team-member">
+            <img src="/api/placeholder/200/200" alt="Team Member" class="team-photo">
+            <h3 class="team-name">Michael Lee</h3>
+            <p class="team-role">Creative Director</p>
+            <p>Award-winning designer passionate about immersive experiences.</p>
+          </div>
+          <div class="team-member">
+            <img src="/api/placeholder/200/200" alt="Team Member" class="team-photo">
+            <h3 class="team-name">Priya Patel</h3>
+            <p class="team-role">Head of Production</p>
+            <p>Expert in large-scale event management and logistics.</p>
+          </div>
+          <div class="team-member">
+            <img src="/api/placeholder/200/200" alt="Team Member" class="team-photo">
+            <h3 class="team-name">David Wilson</h3>
+            <p class="team-role">Technology Director</p>
+            <p>Innovator merging cutting-edge tech with live experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="section-title">What People Say</h2>
+        
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Working with Wireless has transformed how we connect with our fans. Their innovative approach to live events sets a new standard for the industry.</p>
+            <p class="testimonial-author">- Grammy-winning Artist</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">The Wireless Festival was hands down the best event I've ever attended. The attention to detail and overall experience was extraordinary.</p>
+            <p class="testimonial-author">- Festival Attendee</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Wireless has been an incredible partner for our brand. Their commitment to sustainability aligns perfectly with our values.</p>
+            <p class="testimonial-author">- Corporate Partner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="container">
+      <h2 class="section-title">Our Partners</h2>
+      <p>We're proud to collaborate with these industry leaders to create extraordinary experiences.</p>
+      
+      <div class="partner-grid">
+        <div class="partner-logo"><img src="Nandos.png" alt="Nandos"></div>
+        <div class="partner-logo"><img src="Three.png" alt="Three"></div>
+        <div class="partner-logo"><img src="Drip.png" alt="Drip"></div>
+        <div class="partner-logo"><img src="Big Green.png" alt="Big Green"></div>
+        <div class="partner-logo"><img src="Shein.png" alt="Shein"></div>
+        <div class="partner-logo"><img src="Rockstar.png" alt="Rockstar"></div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Experience Wireless?</h2>
+        <p>Join us at our next event and be part of something extraordinary.</p>
+        <a href="#" class="cta-button">View Upcoming Events</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Wireless is an entertainment company driving innovation in live music and digital experiences.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Wireless Company. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
