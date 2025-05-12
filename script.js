@@ -1,6 +1,7 @@
 function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("active");
 }
+//Bookings page
 document.addEventListener("DOMContentLoaded", function () {
   const slideshows = document.querySelectorAll('.slideshow');
   
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeSlide();
   });
 });
+//Contact us page
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -57,3 +59,14 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   document.getElementById('previewMessage').textContent = message;
 
   document.getElementById('previewBox').style.display = 'block' });
+
+
+//Experience
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
