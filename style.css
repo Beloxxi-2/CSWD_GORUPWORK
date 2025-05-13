@@ -116,7 +116,7 @@ img {
   background-color: var(--dark-bg);
   color: var(--text-light);
   padding: var(--spacing-md) 0;
-  position: relative;
+  position:relative;
   z-index: 10;
 }
 
@@ -1017,6 +1017,7 @@ form button:hover {
     flex-direction: column !important;
     text-align: center;
   }
+  
 
   .team_content .image img {
     height: 35vh;
@@ -1282,7 +1283,7 @@ form button:hover {
   align-items: center;
   margin-bottom: var(--spacing-xl);
   border-bottom: 1px solid #ddd;
-  padding-bottom: var(--spacing-lg);
+
 }
 
 .artist-container:hover {
@@ -1349,3 +1350,205 @@ form button:hover {
   margin-bottom: var(--spacing-xl);
 }
 
+/* Tickets Hero Section */
+.tickets-hero-section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.tickets-hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.tickets-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.tickets-hero-text h1 {
+  font-size: 3rem;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.tickets-hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+//* Tickets Section */
+.tickets-section {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+}
+
+.tickets-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+/* Day-Specific Containers */
+/* Ticket Container Styling */
+.tickets-day-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 380px;
+  margin: 0 auto var(--spacing-xl) auto;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #000;
+  max-width: 800px;
+}
+
+.tickets-day-image {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+.tickets-day-details {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 2rem 2rem 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tickets-day-details .ticket-notice {
+  background: #111;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  border-radius: 0 0 6px 0;
+  display: inline-block;
+}
+
+.tickets-day-details h3 {
+  font-family: 'Anton', 'Arial Black', Arial, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: 2px;
+}
+
+.tickets-day-details .ticket-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.tickets-day-details .btn.primary {
+  background: rgba(255,255,255,0.85);
+  color: #111;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tickets-day-details .btn.primary:hover {
+  background: #fff;
+  color: #111;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+
+  }
+}
+
+
+/* Tickets FAQ Section */
+.tickets-faq {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background-color: var(--light-bg);
+}
+
+.tickets-faq h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tickets-faq-item {
+  margin-bottom: var(--spacing-md);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.tickets-faq-question {
+  background: none;
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-md);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.tickets-arrow {
+  margin-right: var(--spacing-md);
+  transition: transform 0.3s ease;
+}
+
+.tickets-faq-question[aria-expanded="true"] .tickets-arrow {
+  transform: rotate(90deg);
+}
+
+.tickets-faq-answer {
+  padding: 0 var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) * 2 + 8px);
+  display: none;
+}
+
+.tickets-faq-question[aria-expanded="true"] + .tickets-faq-answer {
+  display: block;
+}

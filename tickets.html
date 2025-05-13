@@ -20,14 +20,15 @@
       </h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html"class="active">Home</a></li>
-          <li><a href="about.html" >About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="Artists.html">Lineup</a></li>
+          <li><a href="tickets.html" class="active">Tickets</a></li>
           <li><a href="#" id="toggle-theme">Dark Mode</a></li>
           <li><a href="experience.html">Experience</a></li>
           <li><a href="Apartments.html">Apartments</a></li>
-          <li><a href="Developers.html" >Developers</a></li>
+          <li><a href="Developers.html">Developers</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle">More</a>
             <ul class="dropdown-menu">
@@ -46,33 +47,82 @@
   </header>
 
   <main id="main-content">
+    <!-- Hero Section -->
+    <section class="tickets-hero-section">
+      <div class="tickets-hero-overlay"></div>
+      <img src="images/Wireless bg.png" alt="Tickets Hero" class="tickets-hero-img">
+      <div class="tickets-hero-text">
+        <h1>Get Your Tickets Now!</h1>
+        <p>Don't miss out on the biggest music festival of the year. Secure your spot for an unforgettable weekend of live performances.</p>
+      </div>
+    </section>
 
-   
+    <!-- Tickets Section -->
+    <section class="tickets-section">
+      <h2>Choose Your Tickets</h2>
 
-
-
-    <section class="lineup-preview">
-      <h2>Order Tickets Now!</h2>
-      <div class="artist-grid">
-        <!-- Ticket 1 -->
-        <div class="artist-card">
-          <h3>General Admission</h3>
-          <p>$50 - Access to all general areas</p>
+      <!-- Friday Tickets -->
+      <div class="tickets-day-container">
+        <div class="tickets-day-image" style="background-image: url('https://wirelessfestival.co.uk/wp-content/uploads/2023/07/2023_Wireless_BenAwin-227-1200x800.jpg');"></div>
+        <div class="tickets-day-details">
+          <h3>Friday Lineup</h3>
+          <p>Headliner: Burna Boy</p>
+          <p>$50 - General Admission</p>
+          <p>$150 - VIP</p>
           <a href="#" class="btn primary">Buy Now</a>
         </div>
+      </div>
 
-        <!-- Ticket 2 -->
-        <div class="artist-card">
-          <h3>VIP</h3>
-          <p>$150 - Access to VIP areas and perks</p>
+      <!-- Saturday Tickets -->
+      <div class="tickets-day-container">
+        <div class="tickets-day-image" style="background-image: url('https://wirelessfestival.co.uk/wp-content/uploads/2023/07/2023_WirelessFestival2023_MattEachus_MP2_8376-1200x800.jpg');"></div>
+        <div class="tickets-day-details">
+          <h3>Saturday Lineup</h3>
+          <p>Headliner: Central Cee</p>
+          <p>$50 - General Admission</p>
+          <p>$150 - VIP</p>
           <a href="#" class="btn primary">Buy Now</a>
         </div>
+      </div>
 
-        <!-- Ticket 3 -->
-        <div class="artist-card">
-          <h3>Early Bird</h3>
-          <p>$30 - Limited availability</p>
+      <!-- Sunday Tickets -->
+      <div class="tickets-day-container">
+        <div class="tickets-day-image" style="background-image: url('https://wirelessfestival.co.uk/wp-content/uploads/2023/07/2023_WirelessFestival2023_MattEachus_MP2_8376-1200x800.jpg');"></div>
+        <div class="tickets-day-details">
+          <h3>Sunday Lineup</h3>
+          <p>Headliner: Jorja Smith</p>
+          <p>$50 - General Admission</p>
+          <p>$150 - VIP</p>
           <a href="#" class="btn primary">Buy Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="tickets-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="tickets-faq-item">
+        <button class="tickets-faq-question" aria-expanded="false">
+          <span class="tickets-arrow">▶</span> Are tickets refundable?
+        </button>
+        <div class="tickets-faq-answer">
+          <p>Tickets are non-refundable unless the event is canceled. Please review our refund policy for more details.</p>
+        </div>
+      </div>
+      <div class="tickets-faq-item">
+        <button class="tickets-faq-question" aria-expanded="false">
+          <span class="tickets-arrow">▶</span> Are there age restrictions?
+        </button>
+        <div class="tickets-faq-answer">
+          <p>Yes, attendees must be 18 years or older. Please bring a valid ID for entry.</p>
+        </div>
+      </div>
+      <div class="tickets-faq-item">
+        <button class="tickets-faq-question" aria-expanded="false">
+          <span class="tickets-arrow">▶</span> Can I upgrade my ticket to VIP?
+        </button>
+        <div class="tickets-faq-answer">
+          <p>Yes, ticket upgrades are available at the event, subject to availability.</p>
         </div>
       </div>
     </section>
@@ -106,5 +156,6 @@
       <p>© 2025 Wireless Festival. All rights reserved.</p>
     </div>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
