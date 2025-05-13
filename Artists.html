@@ -1,86 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
-    <title>Artists Performing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <title>Tickets</title>
 </head>
 <body>
-    <header>
-        <div class="max-width-container">
-            <a class="home-link" href="home.html">
-                <img src="Images/wireless logo.png" alt="Wireless Festival Logo" class="logo">
-            </a>
-            <nav class="nav-wrap">
-                <ul class="primary">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="AboutUs.html">About</a></li>
-                    <li><a href="Artists.html" class="active">Artists</a></li>
-                    <li><a href="Tickets.html">Tickets</a></li>
-                    <li><a href="News.html">News</a></li>
-                    <li><a href="Experience.html">Experience</a></li>
-                    <li><a href="Stay.html">Stay</a></li>
-                    <li><a href="Merch.html">Merch</a></li>
-                    <li><a href="Partners.html">Partners</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/inverted-wireless_logo.png" alt="Wireless Festival Logo" class="logo-img">
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="Artists.html" class="active">Lineup</a></li>
+          <li><a href="#" id="toggle-theme">Dark Mode</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="Apartments.html">Apartments</a></li>
+          <li><a href="Developers.html" >Developers</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">More</a>
+            <ul class="dropdown-menu">
+              <li><a href="merch.html">Merch</a></li>
+              <li><a href="partners.html">Partners</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="sr-only">Menu</span>
+          <span class="menu-icon">☰</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+<main id="main-content">
+  <!-- Slideshow Section -->
+  <section class="artist-slideshow">
+  <div class="slideshow-container">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="Images/burna-boy_landscape.jpeg" alt="Burna Boy">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h3>Burna Boy</h3>
+        <p>Global Afrofusion superstar blending Afrobeat, dancehall, and hip-hop with Grammy-winning energy.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="Images/central-cee_landscape.jpeg" alt="Central Cee">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h3>Central Cee</h3>
+        <p>West London rapper redefining UK drill with sharp bars and slick flows.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="Images/jorja-smith_landscape.jpeg" alt="Jorja Smith">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h3>Jorja Smith</h3>
+        <p>Soulful British singer blending R&B, jazz, and pop with powerful vocals.</p>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="prev" aria-label="Previous Slide">❮</button>
+    <button class="next" aria-label="Next Slide">❯</button>
+  </div>
+
+  <!-- Navigation Dots -->
+  <div class="slideshow-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+  </div>
+</section>
+
+
+<section class="artist-intro">
+  <div class="container">
+    <h2>Meet the Artists</h2>
+    <p>
+      Wireless Festival 2025 brings together the biggest names in music for an unforgettable weekend of live performances. From global superstars to rising talents, our lineup spans genres like Afrobeat, Hip-Hop, R&B, and Drill, ensuring there's something for everyone.
+    </p>
+    <p>
+      Get ready to experience electrifying performances, soulful melodies, and high-energy beats as these incredible artists take the stage. Whether you're here to vibe with your favorite headliners or discover new sounds, Wireless Festival promises a musical journey like no other.
+    </p>
+    <p>
+      Scroll down to explore the full lineup and learn more about the artists performing this year. Don't forget to check out their Spotify previews and follow them on social media to stay connected!
+    </p>
+  </div>
+</section>
+
+  <!-- Lineup Section -->
+  <section class="lineup">
+    <h2>Friday Lineup</h2>
+    <div class="artist-list">
+      <!-- Lead Artist -->
+      <div class="artist-container">
+        <img src="Images/burna.jpg" alt="Burna Boy" class="artist-image">
+        <div class="artist-description">
+          <h3>Burna Boy</h3>
+          <p>A global icon of Afrofusion, Burna Boy brings his infectious energy and genre-blending sound to the Wireless stage. From “Ye” to “Last Last,” expect powerful vocals, rhythmic grooves, and pure vibes as he delivers a world-class performance filled with passion, pride, and unstoppable Afrobeat heat.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2lEl1iNGpz9r2B7R5BqXSD?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
-    </header>
+      </div>
 
-    <main class="day-lineup">
-        <h1>Artists Performing</h1>
-        <section class="artist-listing">
-            <!-- Artist 1 -->
-            <div class="artist-link">
-                <a href="#">
-                    <div class="image-feature">
-                        <img src="Images/burna sample.webp" alt="Burna Boy">
-                    </div>
-                    <div class="artist-detail">
-                        <h2>Burna Boy</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem unde, voluptates suscipit sit nulla modi.</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Artist 2 -->
-            <div class="artist-link">
-                <a href="#">
-                    <div class="image-feature">
-                        <img src="Images/thugger sample.webp" alt="Young Thug">
-                    </div>
-                    <div class="artist-detail">
-                        <h2>Young Thug</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quos iste? Nobis unde aliquam a temporibus?</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Artist 3 -->
-            <div class="artist-link">
-                <a href="#">
-                    <div class="image-feature">
-                        <img src="Images/future sample.webp" alt="Future">
-                    </div>
-                    <div class="artist-detail">
-                        <h2>Future</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt architecto necessitatibus cum.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="content-wrap">
-            <p>&copy; 2025 Wireless Festival. All rights reserved.</p>
+      <!-- Co-Artists -->
+      <div class="artist-container">
+        <img src="Images/future.jpeg" alt="Future" class="artist-image">
+        <div class="artist-description">
+          <h3>Future</h3>
+          <p>A true trap pioneer, Future’s dark melodies and heavy-hitting anthems have defined a generation. With chart-toppers like “Mask Off” and “Life Is Good,” expect a relentless set full of swagger, bass, and raw emotion.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5yY9lUy8nbvjM1Uyo1Uqoc?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
-    </footer>
+      </div>
+
+      <div class="artist-container">
+        <img src="Images/lil-baby.jpeg" alt="Lil Baby" class="artist-image">
+        <div class="artist-description">
+          <h3>Lil Baby</h3>
+          <p>One of the biggest names in rap today, Lil Baby hits the Wireless stage with back-to-back anthems and unfiltered street energy. From “Drip Too Hard” to “The Bigger Picture,” his raw flow and crowd-commanding presence guarantee a performance you won’t want to miss.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/78QR3Wp35dqAhFEc2qAGjE?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <h2>Saturday Lineup</h2>
+    <div class="artist-list">
+      <!-- Lead Artist -->
+      <div class="artist-container">
+        <img src="Images/central-cee.jpeg" alt="Central Cee" class="artist-image">
+        <div class="artist-description">
+          <h3>Central Cee</h3>
+          <p>West London's own Central Cee returns with razor-sharp bars and drill-infused bangers that have taken the world by storm. Known for “Doja” and “Sprinter,” his flow, fashion, and stage presence are unmatched.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2FDTHlrBguDzQkp7PVj16Q?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- Co-Artists -->
+      <div class="artist-container">
+        <img src="Images/lil-uzivert.jpeg" alt="Lil Uzi Vert" class="artist-image">
+        <div class="artist-description">
+          <h3>Lil Uzi Vert</h3>
+          <p>A true rockstar of the new school, Lil Uzi Vert brings futuristic vibes, electric energy, and hits like “XO Tour Llif3” and “Just Wanna Rock.”</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7GX5flRQZVHRAGd6B4TmDO?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <h2>Sunday Lineup</h2>
+    <div class="artist-list">
+      <!-- Lead Artist -->
+      <div class="artist-container">
+        <img src="Images/Jorja Smith.jpeg" alt="Jorja Smith" class="artist-image">
+        <div class="artist-description">
+          <h3>Jorja Smith</h3>
+          <p>Get ready for pure elegance and soulful energy as Jorja Smith brings her signature blend of R&B, jazz, and pop to the stage. With stunning vocals and hits like “Be Honest” and “Blue Lights,” her set promises to be an unforgettable moment of beauty and emotion.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1It1TxBK3xIQAB4xJkPevn?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- Co-Artists -->
+      <div class="artist-container">
+        <img src="Images/future.jpeg" alt="Future" class="artist-image">
+        <div class="artist-description">
+          <h3>Future</h3>
+          <p>A true trap pioneer, Future’s dark melodies and heavy-hitting anthems have defined a generation. With chart-toppers like “Mask Off” and “Life Is Good,” expect a relentless set full of swagger, bass, and raw emotion.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5yY9lUy8nbvjM1Uyo1Uqoc?utm_source=generator&theme=0" width="95%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>About</h3>
+        <p>The UK's leading urban music festival featuring top international acts and unforgettable experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://instagram.com/wirelessfest" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://tiktok.com/@wirelessfest" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://youtube.com/wirelessfestival" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Wireless Festival. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

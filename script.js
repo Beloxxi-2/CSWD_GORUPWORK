@@ -7,6 +7,8 @@ const newsletterForm = document.getElementById('newsletter-form');
 const newsletterFeedback = document.getElementById('newsletter-feedback');
 const faqQuestions = document.querySelectorAll('.faq-question');
 
+const artistContainers = document.querySelectorAll('.artist-container');
+
 // Check for saved theme preference or use system preference
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
@@ -192,4 +194,47 @@ document.addEventListener('DOMContentLoaded', function () {
     changeSlide();
   });
 });
->>>>>>> c7b16d3effeda26231014462818ee3f0840ed5d0
+
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const dots = document.querySelectorAll('.dot');
+
+let currentSlide = 0;
+
+// Show the current slide
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+// Show the next slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Show the previous slide
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Add event listeners for navigation buttons
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+// Add event listeners for dots
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
+});
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);

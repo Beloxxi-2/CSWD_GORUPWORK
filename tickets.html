@@ -3,65 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
   <link rel="manifest" href="favicon_io/site.webmanifest">
-  <title>Tickets Page</title>
+  <title>Tickets</title>
 </head>
 <body>
-  <header>
-    <div class="max-width-container">
-      <a class="home-link" href="home.html">
-        <img src="Images/wireless logo.png" alt="Wireless Festival Logo" class="logo">
-      </a>
-      <nav class="nav-wrap">
-        <ul class="primary">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="AboutUs.html">About</a></li>
-          <li><a href="Artists.html">Artists</a></li>
-          <li><a href="Tickets.html" class="active">Tickets</a></li>
-          <li><a href="News.html">News</a></li>
-          <li><a href="Experience.html">Experience</a></li>
-          <li><a href="Stay.html">Stay</a></li>
-          <li><a href="Merch.html">Merch</a></li>
-          <li><a href="Partners.html">Partners</a></li>
-          <li><a href="Contact.html">Contact</a></li>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/inverted-wireless_logo.png" alt="Wireless Festival Logo" class="logo-img">
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html"class="active">Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="Artists.html">Lineup</a></li>
+          <li><a href="#" id="toggle-theme">Dark Mode</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="Apartments.html">Apartments</a></li>
+          <li><a href="Developers.html" >Developers</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">More</a>
+            <ul class="dropdown-menu">
+              <li><a href="merch.html">Merch</a></li>
+              <li><a href="partners.html">Partners</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
         </ul>
+        <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="sr-only">Menu</span>
+          <span class="menu-icon">☰</span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <h1>Order Tickets Now!</h1>
-    <section class="ticket-listing">
-      <!-- Ticket 1 -->
-      <div class="ticket-card">
-        <h2>General Admission</h2>
-        <p>$50 - Access to all general areas</p>
-        <button class="buy-button">Buy Now</button>
-      </div>
+  <main id="main-content">
 
-      <!-- Ticket 2 -->
-      <div class="ticket-card">
-        <h2>VIP</h2>
-        <p>$150 - Access to VIP areas and perks</p>
-        <button class="buy-button">Buy Now</button>
-      </div>
+   
 
-      <!-- Ticket 3 -->
-      <div class="ticket-card">
-        <h2>Early Bird</h2>
-        <p>$30 - Limited availability</p>
-        <button class="buy-button">Buy Now</button>
+
+
+    <section class="lineup-preview">
+      <h2>Order Tickets Now!</h2>
+      <div class="artist-grid">
+        <!-- Ticket 1 -->
+        <div class="artist-card">
+          <h3>General Admission</h3>
+          <p>$50 - Access to all general areas</p>
+          <a href="#" class="btn primary">Buy Now</a>
+        </div>
+
+        <!-- Ticket 2 -->
+        <div class="artist-card">
+          <h3>VIP</h3>
+          <p>$150 - Access to VIP areas and perks</p>
+          <a href="#" class="btn primary">Buy Now</a>
+        </div>
+
+        <!-- Ticket 3 -->
+        <div class="artist-card">
+          <h3>Early Bird</h3>
+          <p>$30 - Limited availability</p>
+          <a href="#" class="btn primary">Buy Now</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="content-wrap">
-      <p>&copy; 2025 Wireless Festival. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h3>About</h3>
+        <p>The UK's leading urban music festival featuring top international acts and unforgettable experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="lineup.html">Lineup</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://instagram.com/wirelessfest" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://tiktok.com/@wirelessfest" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://youtube.com/wirelessfestival" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Wireless Festival. All rights reserved.</p>
     </div>
   </footer>
 </body>
