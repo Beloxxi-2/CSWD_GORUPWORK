@@ -1,4 +1,4 @@
-// DOM Elements
+// === DOM Elements ===
 const body = document.body;
 const themeToggle = document.getElementById('toggle-theme');
 const menuToggle = document.getElementById('menu-toggle');
@@ -6,43 +6,30 @@ const navLinks = document.querySelector('.nav-links');
 const newsletterForm = document.getElementById('newsletter-form');
 const newsletterFeedback = document.getElementById('newsletter-feedback');
 const faqQuestions = document.querySelectorAll('.faq-question');
+const contactForm = document.getElementById('contactForm');
 
-const artistContainers = document.querySelectorAll('.artist-container');
+// === THEME HANDLING ===
+function setTheme(theme) {
+  body.classList.toggle('dark-mode', theme === 'dark');
+  if (themeToggle) themeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  localStorage.setItem('theme', theme);
+}
 
-// Check for saved theme preference or use system preference
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
-
-  if (savedTheme) {
-    body.classList.toggle('dark-mode', savedTheme === 'dark');
-    updateThemeToggleText();
-  } else {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    body.classList.toggle('dark-mode', prefersDark);
-    updateThemeToggleText();
-  }
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
 });
 
-// Toggle dark/light theme
 if (themeToggle) {
   themeToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    body.classList.toggle('dark-mode');
-
-    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-
-    updateThemeToggleText();
+    const isDark = !body.classList.contains('dark-mode');
+    setTheme(isDark ? 'dark' : 'light');
   });
 }
 
-function updateThemeToggleText() {
-  if (themeToggle) {
-    themeToggle.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-  }
-}
-
-// Mobile menu toggle
+// === MOBILE MENU ===
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -50,7 +37,6 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle('active');
   });
 
-  // Close mobile menu when clicking outside
   document.addEventListener('click', (e) => {
     if (
       navLinks.classList.contains('active') &&
@@ -63,21 +49,17 @@ if (menuToggle && navLinks) {
   });
 }
 
-// Handle newsletter form submission
+// === NEWSLETTER FORM ===
 if (newsletterForm && newsletterFeedback) {
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const emailInput = newsletterForm.querySelector('input[type="email"]');
     if (!emailInput) return;
-
     const email = emailInput.value;
-
     newsletterFeedback.textContent = 'Processing...';
-
     setTimeout(() => {
       newsletterFeedback.textContent = `Thanks! ${email} has been subscribed.`;
       newsletterForm.reset();
-
       setTimeout(() => {
         newsletterFeedback.textContent = '';
       }, 5000);
@@ -85,42 +67,34 @@ if (newsletterForm && newsletterFeedback) {
   });
 }
 
-// FAQ accordion functionality
+// === FAQ ACCORDION ===
 faqQuestions.forEach((question) => {
   question.addEventListener('click', () => {
     const expanded = question.getAttribute('aria-expanded') === 'true';
-
-    faqQuestions.forEach((q) => {
-      if (q !== question) {
-        q.setAttribute('aria-expanded', 'false');
-      }
-    });
-
+    faqQuestions.forEach((q) => q.setAttribute('aria-expanded', 'false'));
     question.setAttribute('aria-expanded', !expanded);
   });
 });
 
-// Add animation on scroll
-const observerOptions = {
-  threshold: 0.15,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
+// === SECTION FADE-IN ANIMATION ===
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+);
 
 document.querySelectorAll('section').forEach((section) => {
   section.classList.add('fade-in');
   observer.observe(section);
 });
 
-// Load placeholder images if real images fail to load
+// === IMAGE PLACEHOLDER ON ERROR ===
 document.addEventListener(
   'error',
   (e) => {
@@ -131,110 +105,156 @@ document.addEventListener(
   true
 );
 
-// Contact us page
-const contactForm = document.getElementById('contactForm');
+// === CONTACT FORM PREVIEW ===
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    const name = document.getElementById('name')?.value.trim();
-    const email = document.getElementById('email')?.value.trim();
-    const subject = document.getElementById('subject')?.value.trim();
-    const message = document.getElementById('message')?.value.trim();
-
+    const getVal = id => document.getElementById(id)?.value.trim();
+    const name = getVal('name');
+    const email = getVal('email');
+    const subject = getVal('subject');
+    const message = getVal('message');
     if (!name || !email || !subject || !message) {
       alert('Please fill in all fields.');
       return;
     }
-
-    document.getElementById('previewName').textContent = name;
-    document.getElementById('previewEmail').textContent = email;
-    document.getElementById('previewSubject').textContent = subject;
-    document.getElementById('previewMessage').textContent = message;
-
+    ['Name', 'Email', 'Subject', 'Message'].forEach(field => {
+      document.getElementById('preview' + field).textContent = eval(field.toLowerCase());
+    });
     document.getElementById('previewBox').style.display = 'block';
   });
 }
 
-// Apartments page slideshow
+// === APARTMENTS PAGE SLIDESHOW ===
 document.addEventListener('DOMContentLoaded', function () {
-  const slideshows = document.querySelectorAll('.slideshow');
-
-  slideshows.forEach((slideshow) => {
+  document.querySelectorAll('.slideshow').forEach((slideshow) => {
     let currentIndex = 0;
     const slides = slideshow.querySelectorAll('.slide');
     const prevButton = slideshow.querySelector('.prev');
     const nextButton = slideshow.querySelector('.next');
-
     if (!slides.length || !prevButton || !nextButton) return;
-
     slideshow.classList.add('active');
-
     function changeSlide() {
       slides.forEach((slide, index) => {
         slide.style.display = index === currentIndex ? 'block' : 'none';
       });
     }
-
     prevButton.addEventListener('click', () => {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
       changeSlide();
     });
-
     nextButton.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % slides.length;
       changeSlide();
     });
-
     setInterval(() => {
       currentIndex = (currentIndex + 1) % slides.length;
       changeSlide();
     }, 7000);
-
     changeSlide();
   });
 });
 
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const dots = document.querySelectorAll('.dot');
-
-let currentSlide = 0;
-
-// Show the current slide
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-}
-
-// Show the next slide
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Show the previous slide
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Add event listeners for navigation buttons
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-// Add event listeners for dots
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentSlide = index;
+// === MAIN SLIDESHOW (ARTISTS PAGE) ===
+(function () {
+  const slides = document.querySelectorAll('.slide');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const dots = document.querySelectorAll('.dot');
+  if (!slides.length) return;
+  let currentSlide = 0;
+  function showSlide(index) {
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+  }
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
+  }
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+  if (nextButton) nextButton.addEventListener('click', nextSlide);
+  if (prevButton) prevButton.addEventListener('click', prevSlide);
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+    });
   });
+  setInterval(nextSlide, 5000);
+  showSlide(currentSlide);
+})();
+
+//   SWITCHING IMAGES
+  var productElements = document.querySelectorAll(".product");
+
+  for (var i = 0; i < productElements.length; i++) {
+    var product = productElements[i];
+
+    product.addEventListener("mouseenter", function(event) {
+      var imageElement = this.querySelector("img");
+      var backImage = imageElement.getAttribute("data-back");
+      imageElement.src = backImage;
+    });
+
+    product.addEventListener("mouseleave", function(event) {
+      var imageElement = this.querySelector("img");
+      var frontImage = imageElement.getAttribute("data-front");
+      imageElement.src = frontImage;
+    });
+}
+
+// DIRECTION TO PRODUCT SECTIONS
+
+// Get the hash from the URL (e.g. "#2")
+const hash = window.location.hash.replace("#", "");
+console.log("HASH IS:", hash);
+
+// Hide all sections
+document.querySelectorAll(".powerless-div").forEach(element => {
+  element.style.display = "none";
+  console.log("Successfully hidden all sections")
 });
 
-// Auto-slide every 5 seconds
-setInterval(nextSlide, 5000);
+// Show the specific section if the ID matches
+if (hash) {
+  const section = document.getElementById(hash);
+  if (section) {
+    section.style.display = "block";
+  }
+} else {
+    console.log("No matching ID")
+}
+
+// SWITCH DISPLAY FOR UNDER PRODUCTS
+
+// Select all under-product links
+document.querySelectorAll('a.under-product').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent navigation to products.html...
+  
+      const hash = this.href.split('#')[1]; // Get hash part
+      console.log("HASH IS:", hash);
+  
+      // Hide all target sections
+      document.querySelectorAll(".powerless-div").forEach(element => {
+        element.style.display = "none";
+      });
+  
+      // Show the specific section by ID
+      if (hash) {
+        const section = document.getElementById(hash);
+        if (section) {
+          section.style.display = "block";
+          console.log("Section with ID: " + hash + " displayed")
+        } else {
+          console.log("Section with ID '" + hash + "' not found.");
+        }
+      } else {
+        console.log("No hash found.");
+      }
+    });
+  });
+  

@@ -338,7 +338,7 @@ img {
   background-color: var(--light-bg);
 }
 
-.dark-mode .faq {
+.dark-mode .faq  {
   background-color: var(--dark-bg);
 }
 
@@ -373,6 +373,10 @@ img {
   align-items: center;
 }
 
+.dark-mode .faq-question{
+  color: var(--text-light);
+}
+
 .arrow {
   margin-right: var(--spacing-md);
   transition: transform 0.3s ease;
@@ -385,6 +389,10 @@ img {
 .faq-answer {
   padding: 0 var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) * 2 + 8px);
   display: none;
+}
+
+.dark-mode .faq-answer {
+  color: var(--text-light);
 }
 
 .faq-question[aria-expanded="true"] + .faq-answer {
@@ -1551,4 +1559,616 @@ form button:hover {
 
 .tickets-faq-question[aria-expanded="true"] + .tickets-faq-answer {
   display: block;
+}
+
+/*PARTNERS SECTION*/
+/* PARTNERS PAGE */
+body.partners-page {
+    background-color: white;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.partner-container > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+
+.heading{
+    font-size: 8rem;
+    background: none;
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-top: 10rem;
+    color: black;
+}
+
+.partner-imgs {
+  flex: 1 1 300px;
+  max-width: 70%;
+  height: auto;
+  
+}
+.partners-page .nav-links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.partners-page .mobile-menu{
+    display: none
+}
+
+.partners-page hr {
+    border: none;
+    height: 4px; /* thickness */
+    background-color: black; /* or any color */
+    width: 50%; /* control how long it is */
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+.partner-info{
+    flex: 1 1 300px;
+  padding: 20px;
+  background-color: white;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+.partner-info p{
+    line-height: 1.3em;
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.3em;
+}
+
+.partners-footer{
+    margin-top: 1rem;
+    background-color: black;
+}
+
+/* MERCH PAGE */
+body.merch-page {
+    background-color: rgb(26, 26, 26);
+    font-family: "Roboto Slab", serif;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.references{
+    display: none;
+}
+
+.merch-label {
+    text-transform: uppercase;
+    color: rgb(227, 13, 114);
+    font-size: 1.4rem;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.merch-page hr{
+    margin: 0;
+    border: none;
+    height: 1px; /* thickness */
+    background-color: gray; /* or any color */
+}
+
+.wireless-merch-logo {
+    display: block;
+    margin: 0px auto 0 auto;
+    max-width: 18rem;
+    height: auto;
+}
+.merchHeading{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.merchBg{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+
+.merch-page header {
+    align-items: center;
+    justify-content: center;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    all: unset;                
+    cursor: pointer;           
+    display: contents;
+}
+
+.product{
+    cursor:  pointer;
+    color: white;
+    padding: 1.5rem;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+/* Remove left border on the first column of each row */
+.product-grid a:nth-child(4n + 1) .product {
+    border-left: none;
+}
+  
+
+
+.product h3{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 2px;
+    font-weight:300;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.product p{
+    font-weight:300;
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.product img{
+    width: 17rem;
+    margin: 0;
+    height: auto;
+}
+
+.product:hover{
+    color: rgb(227, 13, 114);
+}
+
+.newsletter h3{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    color: rgb(227, 13, 114);
+    margin-top: 1rem;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.newsletter p{
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    margin-top: 0;
+    color: rgb(227, 13, 114);
+    margin-left: 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* PRODUCT ONLY PAGE */
+body.product-page {
+    background-color: rgb(26, 26, 26);
+    font-family: "Roboto Slab", serif;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Product Page Fixes */
+.product-view-grid,
+.under-product-grid {
+    max-width: 100vw;
+}
+
+.product-view-grid .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Remove fixed widths */
+.product img,
+.under-product-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-page hr{
+    margin: 0;
+    border: none;
+    height: 1px; /* thickness */
+    background-color: gray; /* or any color */
+}
+
+/* PRODUCT GRID */
+.product-view-grid {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-view-grid .img-detail{
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    text-align: left;
+    border-bottom: 0.5px solid grey;
+    border-left: 0.1px solid grey;
+    border-top: 0.1px solid grey;
+}
+
+.product-view-grid .img-detail h3{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.product-view-grid .img-detail .price{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.product-view-grid .img-detail .avaiability{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.powerless-div{
+    all: unset; 
+    display: contents; 
+}
+
+.product-view-grid .img-detail .sales{
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: red;
+    color: black;
+    font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 0;
+    width: 20rem;
+}
+
+.product-view-grid .image{
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 1.2rem;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+}
+
+.product-view-grid .image img{
+    margin: 0;
+    padding: 0;
+    width: 591.833px;
+    height: 591.833px;
+}
+
+/* DOUBLE IMAGES */
+.product-view-grid .double-image{
+    padding-top: 1.2rem;
+    padding-left: 1.2rem;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 1.2rem;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    display: flex;
+    gap: 1rem;
+}
+
+.product-view-grid .double-image img{
+    
+    margin: 0;
+    padding: 0;
+    width: 285.917px;
+    height: 285.917px;
+    margin-bottom: 10rem;  
+}
+
+
+
+/* OTHER PRODUCT OPTIONS */
+.under-product-grid{
+    margin-top: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* REMOVE BORDER LEFT ON FIRST PRODUCTS */
+.under-product-grid a:first-child .product {
+    border-left: none;
+}
+  
+
+.under-product-grid img{
+    margin: 0;
+    padding: 0;
+    width: 17rem;
+    height: auto;
+}
+
+.product-view-grid h3{
+    text-transform: uppercase;
+}
+
+
+/* MEDIA QUERIES */
+/* Merch Page Responsive Styles */
+@media (max-width: 1024px) {
+
+    /* MERCH PAGE */
+  .merch-page .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .merch-page .product {
+    padding: 1rem;
+  }
+  
+  .merch-page .product img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .merch-page .product h3,
+  .merch-page .product .price {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+    /* PARTNERS PAGE */
+    .partners-page .nav-links {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    
+    .partners-page .nav-links li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .partners-page .logo {
+        display: none;
+        text-align: center;
+    }
+
+    .partners-page .mobile-menu {
+        display: none;
+    }
+
+
+  .partner-info {
+    padding: 1rem;
+  }
+
+    /* MERCH PAGE */
+  .merch-page .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .merch-page .product {
+    border-left: none !important;
+    border-bottom: 1px solid grey;
+  }
+  
+  .merch-page .product-grid a:nth-child(odd) .product {
+    border-right: 1px solid grey;
+  }
+  
+  .merchHeading {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .newsletter h3 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  
+  .newsletter p {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    line-height: 1.4;
+  }
+}
+
+
+    /* MERCH PAGE */
+  .merch-page .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .merch-page .product {
+    border-right: none !important;
+    border-bottom: 1px solid grey;
+  }
+  
+  .merchHeading {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .merch-page .product h3 {
+    font-size: 1rem;
+  }
+  
+  .merch-page .product .price {
+    font-size: 0.9rem;
+  }
+  
+  .newsletter h3 {
+    font-size: 1.2rem;
+  }
+  
+  .newsletter p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .wireless-merch-logo {
+    max-width: 12rem;
+  }
+}
+
+
+/* Product Page Responsive Styles */
+/* Medium devices (tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+    .product-view-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-view-grid .image img {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+    }
+
+    .product-view-grid .double-image {
+        flex-direction: column;
+    }
+
+    .product-view-grid .double-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .under-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .under-product-grid img {
+        width: 100%;
+    }
+
+    .product-view-grid .img-detail {
+        padding: 1rem;
+    }
+
+    .product-view-grid .img-detail h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-view-grid .img-detail .price {
+        font-size: 1.2rem;
+    }
+
+    .product-view-grid .img-detail .sales {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Small devices (phones, 480px and down) */
+@media screen and (max-width: 480px) {
+    .under-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-view-grid .img-detail h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-view-grid .img-detail .price {
+        font-size: 1.1rem;
+    }
+
+    .product-view-grid .img-detail .avaiability {
+        font-size: 0.9rem;
+    }
+
+    .product-view-grid .img-detail .sales {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .product-view-grid .image,
+    .product-view-grid .double-image {
+        padding: 0.8rem;
+    }
+}
+
+
+
+/* Large screens adjustments */
+@media screen and (min-width: 1200px) {
+
+
+    /* PRODUCT PAGE */
+    .product-view-grid {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .under-product-grid {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+}
+.dark-mode .list-of-partners {
+    background-color: var(--dark-bg);
+}
+.dark-mode .partner-info {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
 }
