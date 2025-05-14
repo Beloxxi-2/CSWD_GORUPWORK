@@ -58,11 +58,11 @@ nav {
     font-family: "Outfit", sans-serif;
     font-size: 1.3em;
 }
+/*test push*/
 
 .partners-footer{
     margin-top: 1rem;
     background-color: black;
-    /* width: 100%; */
 }
 
 /* MERCH PAGE */
