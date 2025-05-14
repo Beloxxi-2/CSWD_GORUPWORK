@@ -1,6 +1,7 @@
 // === DOM Elements ===
 const body = document.body;
 const themeToggle = document.getElementById('toggle-theme');
+const themeIcon = document.getElementById('theme-icon');
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const newsletterForm = document.getElementById('newsletter-form');
@@ -9,13 +10,31 @@ const faqQuestions = document.querySelectorAll('.faq-question');
 const contactForm = document.getElementById('contactForm');
 
 // === THEME HANDLING ===
+function updateThemeIcon(isDark) {
+  if (themeIcon) {
+    themeIcon.className = "fa-solid fa-circle-half-stroke";
+    themeIcon.style.color = "#fff";
+    // Flip the icon horizontally in dark mode, normal in light mode
+    themeIcon.style.transform = isDark ? "scaleX(-1)" : "scaleX(1)";
+    themeIcon.style.transition = "transform 0.3s";
+  }
+}
+
 function setTheme(theme) {
   body.classList.toggle('dark-mode', theme === 'dark');
-  if (themeToggle) themeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  updateThemeIcon(theme === 'dark');
   localStorage.setItem('theme', theme);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Move theme icon to end of nav bar if not already
+  const navLinksList = document.querySelector('.nav-links');
+  const themeLi = document.getElementById('toggle-theme')?.parentElement;
+  if (navLinksList && themeLi) {
+    navLinksList.appendChild(themeLi);
+  }
+
+  // Set theme on load
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
@@ -69,10 +88,26 @@ if (newsletterForm && newsletterFeedback) {
 
 // === FAQ ACCORDION ===
 faqQuestions.forEach((question) => {
-  question.addEventListener('click', () => {
-    const expanded = question.getAttribute('aria-expanded') === 'true';
-    faqQuestions.forEach((q) => q.setAttribute('aria-expanded', 'false'));
-    question.setAttribute('aria-expanded', !expanded);
+  question.addEventListener('click', function () {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    // Collapse all answers
+    faqQuestions.forEach((q) => {
+      q.setAttribute('aria-expanded', 'false');
+      const answer = q.nextElementSibling;
+      if (answer && answer.classList.contains('tickets-faq-answer')) {
+        answer.style.maxHeight = null;
+      }
+    });
+    // Expand/collapse the clicked one
+    this.setAttribute('aria-expanded', !expanded);
+    const answer = this.nextElementSibling;
+    if (answer && answer.classList.contains('tickets-faq-answer')) {
+      if (!expanded) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = null;
+      }
+    }
   });
 });
 
@@ -164,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const slides = artistSlideshow.querySelectorAll('.slide');
   const prevButton = artistSlideshow.querySelector('.prev');
   const nextButton = artistSlideshow.querySelector('.next');
-  const dots = document.querySelectorAll('.dot');
+  const dots = artistSlideshow.querySelectorAll('.dot');
   if (!slides.length) return;
   let currentSlide = 0;
   function showSlide(index) {
@@ -190,75 +225,3 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(nextSlide, 5000);
   showSlide(currentSlide);
 })();
-
-//   SWITCHING IMAGES
-  var productElements = document.querySelectorAll(".product");
-
-  for (var i = 0; i < productElements.length; i++) {
-    var product = productElements[i];
-
-    product.addEventListener("mouseenter", function(event) {
-      var imageElement = this.querySelector("img");
-      var backImage = imageElement.getAttribute("data-back");
-      imageElement.src = backImage;
-    });
-
-    product.addEventListener("mouseleave", function(event) {
-      var imageElement = this.querySelector("img");
-      var frontImage = imageElement.getAttribute("data-front");
-      imageElement.src = frontImage;
-    });
-}
-
-// DIRECTION TO PRODUCT SECTIONS
-
-// Get the hash from the URL (e.g. "#2")
-const hash = window.location.hash.replace("#", "");
-console.log("HASH IS:", hash);
-
-// Hide all sections
-document.querySelectorAll(".powerless-div").forEach(element => {
-  element.style.display = "none";
-  console.log("Successfully hidden all sections")
-});
-
-// Show the specific section if the ID matches
-if (hash) {
-  const section = document.getElementById(hash);
-  if (section) {
-    section.style.display = "block";
-  }
-} else {
-    console.log("No matching ID")
-}
-
-// SWITCH DISPLAY FOR UNDER PRODUCTS
-
-// Select all under-product links
-document.querySelectorAll('a.under-product').forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent navigation to products.html...
-  
-      const hash = this.href.split('#')[1]; // Get hash part
-      console.log("HASH IS:", hash);
-  
-      // Hide all target sections
-      document.querySelectorAll(".powerless-div").forEach(element => {
-        element.style.display = "none";
-      });
-  
-      // Show the specific section by ID
-      if (hash) {
-        const section = document.getElementById(hash);
-        if (section) {
-          section.style.display = "block";
-          console.log("Section with ID: " + hash + " displayed")
-        } else {
-          console.log("Section with ID '" + hash + "' not found.");
-        }
-      } else {
-        console.log("No hash found.");
-      }
-    });
-  });
-  

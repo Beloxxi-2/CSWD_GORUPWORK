@@ -1,13 +1,13 @@
-<!-- news.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News | Wireless Festival</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Wireless Festival 2025</title>
+    <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
@@ -15,7 +15,7 @@
   <link rel="manifest" href="images/favicon_io/site.webmanifest">
 </head>
 <body>
-  <header class="navbar">
+    <header class="navbar">
   <div class="container">
     <h1 class="logo">
       <a href="index.html">
@@ -29,7 +29,6 @@
         <li><a href="tickets.html">Tickets</a></li>
         <li><a href="news.html" class="active">News</a></li>
         <li><a href="Artists.html">Lineup</a></li>
-        <li><a href="#" id="toggle-theme">Dark Mode</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="Apartments.html">Apartments</a></li>
         <li><a href="Developers.html">Developers</a></li>
@@ -40,8 +39,12 @@
             <li><a href="partners.html">Partners</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-        </li>
-      </ul>
+            <li>
+              <a href="#" id="toggle-theme" aria-label="Toggle dark mode">
+                <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
+              </a>
+            </li>
+       </ul>
       <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span class="sr-only">Menu</span>
         <span class="menu-icon">☰</span>
@@ -50,59 +53,68 @@
   </div>
 </header>
 
-  <main class="content fade-in">
-    <section class="news-section">
-      <h2>Latest News</h2>
-      <article class="news-article">
-        <img src="https://source.unsplash.com/800x400/?festival,announcement" alt="Headliner Announcement">
-        <h3>Wireless 2025 Headliners Revealed</h3>
-        <p>The wait is over! Wireless Festival 2025 will feature explosive performances by Drake, Nicki Minaj, and Central Cee. Prepare for a weekend of unforgettable music and energy.</p>
-        <a href="#" class="btn secondary">Read More</a>
-      </article>
-
-      <article class="news-article">
-        <img src="https://source.unsplash.com/800x400/?vip,event" alt="VIP Experience">
-        <h3>VIP Packages Now Available</h3>
-        <p>Want a premium experience? Our VIP packages include fast track entry, exclusive lounge access, premium viewing areas, and more. Available in limited numbers only.</p>
-        <a href="#" class="btn secondary">Explore VIP</a>
-      </article>
-
-      <article class="news-article">
-        <img src="https://source.unsplash.com/800x400/?music,crowd" alt="Sustainability Initiative">
-        <h3>Going Greener: Our 2025 Sustainability Plan</h3>
-        <p>We're making big changes to reduce our environmental impact. Discover how we're introducing new recycling systems, eco-vendors, and more sustainable transport options.</p>
-        <a href="#" class="btn secondary">Learn More</a>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <h4>About</h4>
-        <p>Wireless is an entertainment company driving innovation in live music and digital experiences.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="lineup.html">Lineup</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
+    <section class="news-hero">
+        <div class="container">
+            <h1>Wireless Festival 2025</h1>
+            <p>Stay up to date with the latest announcements, exclusive insights, and exciting updates about the most anticipated music event of the year.</p>
         </div>
-      </div>
-    </div>
-    <p class="copyright">&copy; 2025 Wireless Festival. All rights reserved.</p>
-  </footer>
+    </section>
 
-  <script src="script.js"></script>
+    <main class="news-grid">
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="images/Drake and central.png" alt="Wireless Festival Headliners">
+            </div>
+            <div class="news-card-content">
+                <h2>Headliners Announced</h2>
+                <p>Burna Boy , Jorja Smith, and Central Cee confirmed for an explosive weekend of unforgettable performances.</p>
+                <a href="#" class="news-card-cta">Read More</a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="images/Wireless Vip.jpg" alt="VIP Festival Experience">
+            </div>
+            <div class="news-card-content">
+                <h2>Exclusive VIP Packages</h2>
+                <p>Elevate your festival experience with premium access, exclusive lounges, and unparalleled viewing areas.</p>
+                <a href="#" class="news-card-cta">Explore VIP</a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="images/Wireless Sustanablilty.webp" alt="Festival Sustainability Initiative">
+            </div>
+            <div class="news-card-content">
+                <h2>Sustainability Commitment</h2>
+                <p>Discover our comprehensive plan to reduce environmental impact and create a more sustainable festival experience.</p>
+                <a href="#" class="news-card-cta">Learn More</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h4>About Wireless</h4>
+                    <p>The premier music festival delivering cutting-edge performances and unforgettable experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="lineup.html">Lineup</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wireless Festival. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

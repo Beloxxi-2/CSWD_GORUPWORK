@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
@@ -28,7 +29,6 @@
         <li><a href="tickets.html" class="active">Tickets</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="Artists.html">Lineup</a></li>
-        <li><a href="#" id="toggle-theme">Dark Mode</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="Apartments.html">Apartments</a></li>
         <li><a href="Developers.html">Developers</a></li>
@@ -39,8 +39,12 @@
             <li><a href="partners.html">Partners</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-        </li>
-      </ul>
+            <li>
+              <a href="#" id="toggle-theme" aria-label="Toggle dark mode">
+                <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
+              </a>
+            </li>
+       </ul>
       <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span class="sr-only">Menu</span>
         <span class="menu-icon">☰</span>
