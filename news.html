@@ -1,83 +1,204 @@
-<!-- news.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News | Wireless Festival</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Wireless Festival 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-accent: #ff1493;
+            --secondary-accent: #8a2be2;
+        }
+
+        .news-hero {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.9), rgba(255, 20, 147, 0.9));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .news-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .news-hero p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .news-card-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .news-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover .news-card-image img {
+            transform: scale(1.1);
+        }
+
+        .news-card-content {
+            padding: 1.5rem;
+        }
+
+        .news-card-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .news-card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-card-cta {
+            display: inline-block;
+            background: var(--primary-accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+
+        .news-card-cta:hover {
+            background: var(--secondary-accent);
+        }
+
+        @media (max-width: 768px) {
+            .news-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Wireless</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="news.html" class="active">News</a></li>
-        <li><a href="lineup.html">Lineup</a></li>
-        <li><a href="#" id="toggle-theme">Dark Mode</a></li>
-      </ul>
-      <div class="mobile-menu" id="menu-toggle">&#9776;</div>
-    </nav>
-  </header>
-
-  <main class="content fade-in">
-    <section class="news-section">
-      <h2>Latest News</h2>
-      <article class="news-article">
-        <img src="https://source.unsplash.com/800x400/?festival,announcement" alt="Headliner Announcement">
-        <h3>Wireless 2025 Headliners Revealed</h3>
-        <p>The wait is over! Wireless Festival 2025 will feature explosive performances by Drake, Nicki Minaj, and Central Cee. Prepare for a weekend of unforgettable music and energy.</p>
-        <a href="#" class="btn secondary">Read More</a>
-      </article>
-
-      <article class="news-article">
-        <img src="https://source.unsplash.com/800x400/?vip,event" alt="VIP Experience">
-        <h3>VIP Packages Now Available</h3>
-        <p>Want a premium experience? Our VIP packages include fast track entry, exclusive lounge access, premium viewing areas, and more. Available in limited numbers only.</p>
-        <a href="#" class="btn secondary">Explore VIP</a>
-      </article>
-
-      <article class="news-article">
-        <img src="https://source.unsplash.com/800x400/?music,crowd" alt="Sustainability Initiative">
-        <h3>Going Greener: Our 2025 Sustainability Plan</h3>
-        <p>We're making big changes to reduce our environmental impact. Discover how we're introducing new recycling systems, eco-vendors, and more sustainable transport options.</p>
-        <a href="#" class="btn secondary">Learn More</a>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <h4>About</h4>
-        <p>Wireless is an entertainment company driving innovation in live music and digital experiences.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="lineup.html">Lineup</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">Wireless</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="lineup.html">Lineup</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="apartments.html">Apartments</a></li>
+                    <li><a href="developers.html">Developers</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </div>
-    <p class="copyright">&copy; 2025 Wireless Festival. All rights reserved.</p>
-  </footer>
+    </header>
 
-  <script src="script.js"></script>
+    <section class="news-hero">
+        <div class="container">
+            <h1>Wireless Festival 2025</h1>
+            <p>Stay up to date with the latest announcements, exclusive insights, and exciting updates about the most anticipated music event of the year.</p>
+        </div>
+    </section>
+
+    <main class="news-grid">
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="Drake and central.png" alt="Wireless Festival Headliners">
+            </div>
+            <div class="news-card-content">
+                <h2>Headliners Announced</h2>
+                <p>Drake, Nicki Minaj, and Central Cee confirmed for an explosive weekend of unforgettable performances.</p>
+                <a href="#" class="news-card-cta">Read More</a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="Wireless Vip.jpg" alt="VIP Festival Experience">
+            </div>
+            <div class="news-card-content">
+                <h2>Exclusive VIP Packages</h2>
+                <p>Elevate your festival experience with premium access, exclusive lounges, and unparalleled viewing areas.</p>
+                <a href="#" class="news-card-cta">Explore VIP</a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-card-image">
+                <img src="Wireless Sustanablilty.webp" alt="Festival Sustainability Initiative">
+            </div>
+            <div class="news-card-content">
+                <h2>Sustainability Commitment</h2>
+                <p>Discover our comprehensive plan to reduce environmental impact and create a more sustainable festival experience.</p>
+                <a href="#" class="news-card-cta">Learn More</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h4>About Wireless</h4>
+                    <p>The premier music festival delivering cutting-edge performances and unforgettable experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="lineup.html">Lineup</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wireless Festival. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
