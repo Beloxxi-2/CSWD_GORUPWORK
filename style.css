@@ -2266,11 +2266,16 @@ footer {
             }
         }
 .dark-mode .news-card {
-    background: var(--light-bg);
-    color: var(--text-dark);
+    background: var(--text-dark);
 }
 .tickets-faq-answer {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.dark-mode .news-card-content p  {
+  color: var(--text-light);
+}
+.dark-mode .news-card-content h2 {
+  color: var(--text-light);
 }
