@@ -45,7 +45,7 @@ a {
   transition: var(--transition);
 }
 
-img {
+.partner-logo img {
   max-width: 100%;
   height: auto;
 }
@@ -1165,6 +1165,7 @@ form button:hover {
   object-fit: cover;
 }
 
+
 .slide-overlay {
   position: absolute;
   top: 0;
@@ -2190,7 +2191,6 @@ footer {
     background-color: var(--dark-bg);
     color: var(--text-light);
 }
-
 /* ...existing styles... */
 
 /* Only for the artist slideshow */
