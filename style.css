@@ -2279,3 +2279,14 @@ footer {
 .dark-mode .news-card-content h2 {
   color: var(--text-light);
 }
+.dark-mode .tickets-faq {
+  background: var(--dark-bg);
+
+}
+.dark-mode .tickets-faq-question {
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+.dark-mode .tickets-faq-item {
+  border-color: #333;
+}
