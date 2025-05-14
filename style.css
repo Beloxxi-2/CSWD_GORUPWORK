@@ -1941,7 +1941,7 @@ footer {
         padding: 0;
     }
 
-    .partners-page .nav-links li {
+    .nav-links li {
         margin: 0.5rem 0;
         text-align: center;
     }
@@ -1993,7 +1993,7 @@ footer {
 
 @media (max-width: 480px) {
     /* PARTNERS PAGE */
- .partners-page .nav-links {
+ .nav-links {
         display: flex !important;
         justify-content: center;
         width: 100%;
@@ -2001,13 +2001,13 @@ footer {
         padding: 0;
     }
 
-    .partners-page .nav-links li {
+    .nav-links li {
         margin: 0.1 rem 0;
         text-align: center;
       
     }
 
-    .partners-page .nav-links li a {
+    .nav-links li a {
         font-size: 1.2rem;
         padding: 0.5rem 0;
     }
