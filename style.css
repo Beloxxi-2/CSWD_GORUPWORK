@@ -1498,7 +1498,7 @@ form button:hover {
   letter-spacing: 1px;
   margin-top: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  transition: background 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2189,4 +2189,33 @@ footer {
 .dark-mode .partner-info {
     background-color: var(--dark-bg);
     color: var(--text-light);
+}
+
+/* ...existing styles... */
+
+/* Only for the artist slideshow */
+.artist-slideshow .slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+.artist-slideshow .slide.active {
+  display: block;
+  opacity: 1;
+}
+
+/* For all other slideshows (apartments, etc.) */
+.slideshow .slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+.slideshow.active .slide {
+  /* JS sets display: block for the current slide */
 }

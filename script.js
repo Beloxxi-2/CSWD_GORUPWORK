@@ -157,9 +157,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // === MAIN SLIDESHOW (ARTISTS PAGE) ===
 (function () {
-  const slides = document.querySelectorAll('.slide');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
+  // Only run if the artist slideshow section exists
+  const artistSlideshow = document.querySelector('.artist-slideshow');
+  if (!artistSlideshow) return;
+
+  const slides = artistSlideshow.querySelectorAll('.slide');
+  const prevButton = artistSlideshow.querySelector('.prev');
+  const nextButton = artistSlideshow.querySelector('.next');
   const dots = document.querySelectorAll('.dot');
   if (!slides.length) return;
   let currentSlide = 0;
