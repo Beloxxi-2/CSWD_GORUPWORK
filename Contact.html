@@ -16,79 +16,113 @@
 </head>
 <body>
   <header class="navbar">
-  <div class="container">
-    <h1 class="logo">
-      <a href="index.html">
-        <img src="images/inverted-wireless_logo.png" alt="Wireless Festival Logo" class="logo-img">
-      </a>
-    </h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="tickets.html">Tickets</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="lineup.html">Lineup</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="Apartments.html">Apartments</a></li>
-        <li><a href="Developers.html">Developers</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">More</a>
-          <ul class="dropdown-menu">
-            <li><a href="merch.html">Merch</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-          </ul>
-            <li>
-              <a href="#" id="toggle-theme" aria-label="Toggle dark mode">
-                <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
+      <div class="container">
+          <h1 class="logo">
+              <a href="index.html">
+                  <img src="images/inverted-wireless_logo.png" alt="Wireless Festival Logo" class="logo-img">
               </a>
-            </li>
-       </ul>
-      <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
-        <span class="sr-only">Menu</span>
-        <span class="menu-icon">☰</span>
-      </button>
-    </nav>
-  </div>
-</header>
+          </h1>
+          <nav>
+              <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="tickets.html">Tickets</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="lineup.html">Lineup</a></li>
+                  <li><a href="experience.html">Experience</a></li>
+                  <li><a href="Apartments.html">Apartments</a></li>
+                  <li><a href="Developers.html">Developers</a></li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle">More</a>
+                      <ul class="dropdown-menu">
+                          <li><a href="merch.html">Merch</a></li>
+                          <li><a href="partners.html">Partners</a></li>
+                          <li><a href="contact.html" class="active">Contact</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#" id="toggle-theme" aria-label="Toggle dark mode">
+                          <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
+                      </a>
+                  </li>
+              </ul>
+              <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                  <span class="sr-only">Menu</span>
+                  <span class="menu-icon">☰</span>
+              </button>
+          </nav>
+      </div>
+  </header>
       
   <div class="contact-details">
-    <h2>Our Contact Information</h2>
-    <p>Email: support@festival.com</p>
-    <p>Phone:+44 1234 567 890</p>
-    <p>Address:Roseburn Street, Edinburgh, EH12 5PJ</p>
-    <p>Hours: Mon - Fri: 9am - 5pm</p>
+      <h2>Our Contact Information</h2>
+      <p>Email: support@festival.com</p>
+      <p>Phone:+44 1234 567 890</p>
+      <p>Address:Roseburn Street, Edinburgh, EH12 5PJ</p>
+      <p>Hours: Mon - Fri: 9am - 5pm</p>
   </div>
 
   <h1 class="section-title">Contact Us</h1>
   <form id="contactForm">
-   
-    <h2>Send Us a Message</h2>
+      <h2>Send Us a Message</h2>
 
-    <label for="name">Name*</label>
-    <input type="text" id="name" name="name" required />
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for="email">Email*</label>
-    <input type="email" id="email" name="email" required />
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="subject">Subject*</label>
-    <input type="text" id="subject" name="subject" required />
+      <label for="subject">Subject*</label>
+      <input type="text" id="subject" name="subject" required />
 
-    <label for="message">Message*</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-    <button type="submit">Preview Message</button>
+      <button type="submit">Preview Message</button>
 
-    <div class="preview-box" id="previewBox">
-      <h3>Preview:</h3>
-      <p><strong>Name:</strong> <span id="previewName"></span></p>
-      <p><strong>Email:</strong> <span id="previewEmail"></span></p>
-      <p><strong>Subject:</strong> <span id="previewSubject"></span></p>
-      <p><strong>Message:</strong></p>
-      <p id="previewMessage"></p>
-    </div>
+      <div class="preview-box" id="previewBox">
+          <h3>Preview:</h3>
+          <p><strong>Name:</strong> <span id="previewName"></span></p>
+          <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+          <p><strong>Subject:</strong> <span id="previewSubject"></span></p>
+          <p><strong>Message:</strong></p>
+          <p id="previewMessage"></p>
+      </div>
   </form>
+
+  <footer>
+      <div class="footer-content">
+          <div class="footer-about">
+              <h3>About</h3>
+              <p>The UK's leading urban music festival featuring top international acts and unforgettable experiences.</p>
+          </div>
+          <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="lineup.html">Lineup</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-social">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="https://instagram.com/wirelessfest" target="_blank" rel="noopener noreferrer" aria-label="Follow Wireless Festival on Instagram">Instagram</a>
+                  <a href="https://tiktok.com/@wirelessfest" target="_blank" rel="noopener noreferrer" aria-label="Follow Wireless Festival on TikTok">TikTok</a>
+                  <a href="https://youtube.com/wirelessfestival" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Wireless Festival YouTube channel">YouTube</a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p class="copyright">© 2025 Wireless Festival. All rights reserved.</p>
+          <div class="legal-links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Use</a>
+              <a href="cookies.html">Cookie Policy</a>
+          </div>
+      </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

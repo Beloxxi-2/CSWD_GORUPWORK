@@ -1,4 +1,4 @@
-// === DOM Elements ===
+// DOM Elements 
 const body = document.body;
 const themeToggle = document.getElementById('toggle-theme');
 const themeIcon = document.getElementById('theme-icon');
@@ -9,7 +9,7 @@ const newsletterFeedback = document.getElementById('newsletter-feedback');
 const faqQuestions = document.querySelectorAll('.faq-question');
 const contactForm = document.getElementById('contactForm');
 
-// === THEME HANDLING ===
+//  THEME HANDLING
 function updateThemeIcon(isDark) {
   if (themeIcon) {
     themeIcon.className = "fa-solid fa-circle-half-stroke";
@@ -21,9 +21,9 @@ function updateThemeIcon(isDark) {
 }
 
 function setTheme(theme) {
-  body.classList.toggle('dark-mode', theme === 'dark');
-  updateThemeIcon(theme === 'dark');
-  localStorage.setItem('theme', theme);
+  body.classList.toggle('dark-mode', theme === 'dark');  // Toggle dark mode class
+  updateThemeIcon(theme === 'dark');  // Update icon appearance
+  localStorage.setItem('theme', theme);  // Save theme preference
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinksList.appendChild(themeLi);
   }
 
-  // Set theme on load
+  // Set theme on load based on saved preference or system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
@@ -43,19 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
 if (themeToggle) {
   themeToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    const isDark = !body.classList.contains('dark-mode');
-    setTheme(isDark ? 'dark' : 'light');
+    const isDark = !body.classList.contains('dark-mode');  // Check current mode
+    setTheme(isDark ? 'dark' : 'light');  // Toggle theme
   });
 }
 
-// === MOBILE MENU ===
+// MOBILE MENU 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    navLinks.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', !expanded);  // Toggle aria-expanded
+    navLinks.classList.toggle('active');  // Show/hide menu
   });
 
+  // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (
       navLinks.classList.contains('active') &&
@@ -68,29 +69,29 @@ if (menuToggle && navLinks) {
   });
 }
 
-// === NEWSLETTER FORM ===
+// NEWSLETTER FORM 
 if (newsletterForm && newsletterFeedback) {
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const emailInput = newsletterForm.querySelector('input[type="email"]');
     if (!emailInput) return;
     const email = emailInput.value;
-    newsletterFeedback.textContent = 'Processing...';
+    newsletterFeedback.textContent = 'Processing...';  // Show processing message
     setTimeout(() => {
-      newsletterFeedback.textContent = `Thanks! ${email} has been subscribed.`;
-      newsletterForm.reset();
+      newsletterFeedback.textContent = `Thanks! ${email} has been subscribed.`;  // Success message
+      newsletterForm.reset();  // Clear form
       setTimeout(() => {
-        newsletterFeedback.textContent = '';
+        newsletterFeedback.textContent = '';  // Clear feedback after 5 seconds
       }, 5000);
     }, 1000);
   });
 }
 
-// === FAQ ACCORDION ===
+// FAQ ACCORDION 
 faqQuestions.forEach((question) => {
   question.addEventListener('click', function () {
     const expanded = this.getAttribute('aria-expanded') === 'true';
-    // Collapse all answers
+    // Collapse all answers first
     faqQuestions.forEach((q) => {
       q.setAttribute('aria-expanded', 'false');
       const answer = q.nextElementSibling;
@@ -111,7 +112,7 @@ faqQuestions.forEach((question) => {
   });
 });
 
-// === SECTION FADE-IN ANIMATION ===
+//  SECTION FADE-IN ANIMATION
 const observer = new IntersectionObserver(
   (entries, obs) => {
     entries.forEach((entry) => {
@@ -129,7 +130,7 @@ document.querySelectorAll('section').forEach((section) => {
   observer.observe(section);
 });
 
-// === IMAGE PLACEHOLDER ON ERROR ===
+// IMAGE PLACEHOLDER ON ERROR 
 document.addEventListener(
   'error',
   (e) => {
@@ -140,7 +141,7 @@ document.addEventListener(
   true
 );
 
-// === CONTACT FORM PREVIEW ===
+//CONTACT FORM PREVIEW
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -153,6 +154,7 @@ if (contactForm) {
       alert('Please fill in all fields.');
       return;
     }
+    // Update preview fields
     ['Name', 'Email', 'Subject', 'Message'].forEach(field => {
       document.getElementById('preview' + field).textContent = eval(field.toLowerCase());
     });
@@ -160,7 +162,7 @@ if (contactForm) {
   });
 }
 
-// === APARTMENTS PAGE SLIDESHOW ===
+// APARTMENTS PAGE SLIDESHOW 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.slideshow').forEach((slideshow) => {
     let currentIndex = 0;
@@ -190,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// === MAIN SLIDESHOW (ARTISTS PAGE) ===
+//  MAIN SLIDESHOW (ARTISTS PAGE) 
 (function () {
   // Only run if the artist slideshow section exists
   const artistSlideshow = document.querySelector('.artist-slideshow');
@@ -226,9 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
   showSlide(currentSlide);
 })();
 
-// ...existing code...
-
-// === TICKETS PAGE FAQ DROPDOWN ===
+//TICKETS PAGE FAQ DROPDOWN
 document.querySelectorAll('.tickets-faq-question').forEach((question) => {
   question.addEventListener('click', function () {
     const expanded = this.getAttribute('aria-expanded') === 'true';
