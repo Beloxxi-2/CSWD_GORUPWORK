@@ -2265,3 +2265,12 @@ footer {
                 padding: 2rem 1rem;
             }
         }
+.dark-mode .news-card {
+    background: var(--light-bg);
+    color: var(--text-dark);
+}
+.tickets-faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}

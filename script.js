@@ -225,3 +225,36 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(nextSlide, 5000);
   showSlide(currentSlide);
 })();
+
+// ...existing code...
+
+// === TICKETS PAGE FAQ DROPDOWN ===
+document.querySelectorAll('.tickets-faq-question').forEach((question) => {
+  question.addEventListener('click', function () {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    // Collapse all tickets FAQ answers
+    document.querySelectorAll('.tickets-faq-question').forEach((q) => {
+      q.setAttribute('aria-expanded', 'false');
+      const answer = q.nextElementSibling;
+      if (answer && answer.classList.contains('tickets-faq-answer')) {
+        answer.style.maxHeight = null;
+      }
+      // Reset arrow
+      const arrow = q.querySelector('.tickets-arrow');
+      if (arrow) arrow.style.transform = '';
+    });
+    // Expand/collapse the clicked one
+    this.setAttribute('aria-expanded', !expanded);
+    const answer = this.nextElementSibling;
+    if (answer && answer.classList.contains('tickets-faq-answer')) {
+      if (!expanded) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        // Rotate arrow
+        const arrow = this.querySelector('.tickets-arrow');
+        if (arrow) arrow.style.transform = 'rotate(90deg)';
+      } else {
+        answer.style.maxHeight = null;
+      }
+    }
+  });
+});
